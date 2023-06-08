@@ -6,7 +6,7 @@ using System;
 public class BallController : MonoBehaviour
 {
     [SerializeField] private MaterialController materialController;
-    [SerializeField] private Rigidbody myRGBD;
+    [SerializeField] public Rigidbody myRGBD;
     [SerializeField] private Transform originTransform;
     [SerializeField] private TrailRenderer trailRenderer;
     public event Action<Vector2> onLaunch;
