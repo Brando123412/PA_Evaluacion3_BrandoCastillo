@@ -9,6 +9,7 @@ public class PrimerModificador : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            ballController.materialController.ChangeEmissionColor(MaterialChange.OnOnlyHorizontal);
             ballController.myRGBD.velocity = new Vector3(0, ballController.myRGBD.velocity.y, ballController.myRGBD.velocity.z);
             Destroy(gameObject);
         }

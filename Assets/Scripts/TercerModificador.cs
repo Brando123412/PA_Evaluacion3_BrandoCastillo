@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class TercerModificador : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] BallController ballController;
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            ballController.materialController.ChangeEmissionColor(MaterialChange.OnLooseGravity);
+            ballController.myRGBD.useGravity = false;
+            Destroy(gameObject);
+        }
     }
 }

@@ -9,6 +9,7 @@ public class SegundoModificador : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            ballController.materialController.ChangeEmissionColor(MaterialChange.OnOnlyVertical);
             ballController.myRGBD.velocity = new Vector3(ballController.myRGBD.velocity.x, 0, ballController.myRGBD.velocity.z);
             Destroy(gameObject);
         }
